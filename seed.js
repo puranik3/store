@@ -3,10 +3,10 @@ const { faker } = require("@faker-js/faker");
 
 const orders = [];
 const lineItems = [];
+let lineItemId = 0;
 
 for (let i = 0; i < 10; ++i) {
     let total = 0;
-    let lineItemId = 1;
 
     const order = {
         id: "" + (i + 1),
@@ -19,7 +19,7 @@ for (let i = 0; i < 10; ++i) {
 
     for (let j = 0; j < faker.datatype.number({ min: 1, max: 4 }); ++j) {
         const lineItem = {
-            id: "" + (lineItemId + i + j),
+            id: ++lineItemId + "",
             orderId: "" + order.id,
             ItemName: faker.commerce.productName(),
             PricePerUnit: faker.number.int({
