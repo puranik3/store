@@ -9,7 +9,7 @@ for (let i = 0; i < 10; ++i) {
     let lineItemId = 1;
 
     const order = {
-        id: i + 1,
+        id: "" + (i + 1),
         OrderPrice: total,
         CustomerName: faker.name.firstName(),
         OrderDate: faker.date.recent(7),
@@ -19,8 +19,8 @@ for (let i = 0; i < 10; ++i) {
 
     for (let j = 0; j < faker.datatype.number({ min: 1, max: 4 }); ++j) {
         const lineItem = {
-            id: lineItemId + i + j,
-            orderId: order.id,
+            id: "" + (lineItemId + i + j),
+            orderId: "" + order.id,
             ItemName: faker.commerce.productName(),
             PricePerUnit: faker.number.int({
                 min: 5,
