@@ -10,4 +10,4 @@
 
 ## Note on PORT
 
-By default, the server listens on port `3000`. Set the `PORT` environment variable or modify this in the `.env` file.
+By default, the server listens on port `3000`. Set the `PORT` environment variable or add `PORT=<your_port>` in a `.env` file.
